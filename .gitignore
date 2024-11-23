@@ -1,0 +1,77 @@
+# Node modules
+backend/node_modules
+
+# Logs
+backend/logs/
+backend/*.log
+backend/*.log.*
+
+# Dependency directories
+backend/jspm_packages/
+
+# Environment variables
+backend/.env
+backend/.env.test
+backend/.env.local
+
+# OS-specific files
+backend/.DS_Store
+backend/Thumbs.db
+
+# Vscode settings
+backend/.vscode/
+
+# Production files
+backend/build/
+backend/dist/
+
+# Test directories and coverage reports
+backend/coverage/
+backend/.nyc_output/
+
+# SASS or CSS preprocessors build files
+backend/.sass-cache/
+
+# Package-lock or yarn.lock (if you want to avoid them, but it’s generally good to commit them)
+backend/package-lock.json
+backend/yarn.lock
+
+# Timestamps and compiled files
+backend/*.pem
+backend/*.key
+backend/*.csr
+
+# Cloudinary (if used to store images)
+backend/uploads/
+
+# Other custom files you may want to ignore
+backend/*.bak
+backend/*.swp
+
+
+
+# Logs
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+frontend/*.local
+
+# Editor directories and files
+frontend/.vscode/*
+frontend/!.vscode/extensions.json
+frontend/.idea
+frontend/.DS_Store
+frontend/*.suo
+frontend/*.ntvs*
+frontend/*.njsproj
+frontend/*.sln
+frontend/*.sw?
+

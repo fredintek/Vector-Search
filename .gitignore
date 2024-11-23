@@ -75,3 +75,5 @@ frontend/*.njsproj
 frontend/*.sln
 frontend/*.sw?
 
+.DS_Store
+

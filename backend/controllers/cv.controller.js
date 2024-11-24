@@ -11,7 +11,7 @@ exports.uploadCv = catchAsync(async (req, res, next) => {
     return next(new Error("CV with the same name already exists"));
   }
 
-    // console.log("REQUEST FILE", req.file);
+  // console.log("REQUEST FILE", req.file);
 
   const pdfBuffer = fs.readFileSync(req.file.path);
   const pdfContent = (await pdfParse(pdfBuffer)).text;
@@ -25,7 +25,7 @@ exports.uploadCv = catchAsync(async (req, res, next) => {
       name: req.body.name,
       content: pdfContent.trim(),
       vector: vector.data.data[0].embedding,
-      downloadUrl: `${process.env.SERVER_URL}/uploads/${req.file.filename}`
+      downloadUrl: `${process.env.SERVER_URL}/uploads/${req.file.filename}`,
     });
     await cv.save();
 

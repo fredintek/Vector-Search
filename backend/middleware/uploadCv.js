@@ -11,6 +11,7 @@ const fileFilter = (req, file, cb) => {
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
+    console.log("FILE", file);
     // Set the uploads folder as the destination
     cb(null, path.join(__dirname, "../uploads"));
   },

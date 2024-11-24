@@ -16,7 +16,13 @@ dotenv.config();
 connectDB();
 
 // middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: "*", // or '*'
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
+  })
+);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -27,7 +33,14 @@ app.get("/api/v1", (req, res) => {
     message: "API running successfully",
   });
 });
-app.use("/uploads", express.static(path.join(__dirname, "uploads")))
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "uploads"), {
+    setHeaders: function (res, path) {
+      res.set("Content-Type", "application/pdf");
+    },
+  })
+);
 app.use("/api/v1/cv", cvRoutes);
 
 // error handling middleware

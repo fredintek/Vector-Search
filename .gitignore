@@ -75,5 +75,10 @@ frontend/*.njsproj
 frontend/*.sln
 frontend/*.sw?
 
+# Environment variables
+frontend/.env
+frontend/.env.test
+frontend/.env.local
+
 .DS_Store
 
